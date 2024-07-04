@@ -13,7 +13,7 @@ This Angular project template integrates various tools and features to create a 
 ## API Integration
 
 This project interacts with the following API:
-- [DAFTECH API](https://daftech-api-abdi.up.railway.app/): Provides data for various functionalities within the application.
+- [DAFTECH API](https://github.com/abdi-frost/daftech-api/): Provides data for various functionalities within the application.
 
 ## Getting Started
 
