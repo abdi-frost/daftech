@@ -1,0 +1,74 @@
+<div class="min-h-screen w-full flex items-center justify-center bg-gray-300">
+    <div class>
+        <div *ngIf="user$ | async as user"
+            class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-md ">
+            <div class="flex items-center mb-4">
+                <img *ngIf="user.profilePicture" [src]="user.profilePicture"
+                    alt="Profile Picture"
+                    class="border w-24 h-24 rounded-full mr-4">
+                <div class="w-full">
+                    <div class="w-full flex justify-between">
+                        <h2 class="text-2xl font-semibold flex items-center">
+                            <button class="mr-3 p-2 hover:text-gray-900 hover:bg-gray-300 rounded" (click)="onBack()">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                              </button>
+                            {{ user.firstName }} {{user.lastName }}
+                        </h2>
+                        <button (click)="logout()">
+                            <span
+                                class="text-red-600 font-medium p-1 border rounded">logout</span>
+                        </button>
+                    </div>
+                    <p class="text-gray-600">@{{ user.username }}</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label
+                        class="block text-sm font-medium text-gray-700">Gender:</label>
+                    <p class="text-lg">{{ user.gender }}</p>
+                </div>
+                <div>
+                    <label
+                        class="block text-sm font-medium text-gray-700">Email:</label>
+                    <p class="text-lg">{{ user.email }}</p>
+                </div>
+                <div>
+                    <label
+                        class="block text-sm font-medium text-gray-700">Address:</label>
+                    <p class="text-lg">{{ user.address }}</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Phone
+                        Number:</label>
+                    <p class="text-lg">{{ user.phoneNumber }}</p>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Date
+                        of
+                        Birth:</label>
+                    <p class="text-lg">{{ user.dateOfBirth }}</p>
+                </div>
+                <div *ngIf="user.spouseFirstName">
+                    <label
+                        class="block text-sm font-medium text-gray-700">Spouse
+                        First Name:</label>
+                    <p class="text-lg">{{ user.spouseFirstName }}</p>
+                </div>
+                <div *ngIf="user.spouseLastName">
+                    <label
+                        class="block text-sm font-medium text-gray-700">Spouse
+                        Last Name:</label>
+                    <p class="text-lg">{{ user.spouseLastName }}</p>
+                </div>
+            </div>
+            <div class="my-3">
+                <a routerLink="/cars"
+                    class="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in">
+                    <span class="mr-2 uppercase">View car info</span>
+                </a>
+            </div>
+        </div>
+    </div>
