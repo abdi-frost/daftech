@@ -2,7 +2,7 @@
 <body>
 
   <h1>Angular Project Template</h1>
-
+<h2><a href="https://daftech-demo-abdi.netlify.app/">LIVE DEMO</a>
   <p>This Angular project template integrates various tools and features to create a robust web application.</p>
 
   <h2>Features</h2>
@@ -29,7 +29,7 @@
   </ul>
 
   <h3>Installation</h3>
-  <pre><code>git clone https://github.com/your-repo/angular-project-template.git
+  <pre><code>git clone https://github.com/abdi-frost/daftech.git
 cd angular-project-template
 npm install
 ng serve
